@@ -7,5 +7,5 @@ import java.util.List;
 @Data
 public class BadgesDto {
     private int votes;
-    private List<TrelloAttachmentsDto> trelloAttachments;
+    private List<TrelloAttachmentsDto> attachmentsByType;
 }
