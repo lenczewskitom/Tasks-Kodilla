@@ -1,9 +1,6 @@
 package com.crud.tasks.trello.client;
 
-import com.crud.tasks.domain.BadgesDto;
-import com.crud.tasks.domain.CreatedTrelloCard;
-import com.crud.tasks.domain.TrelloBoardDto;
-import com.crud.tasks.domain.TrelloCardDto;
+import com.crud.tasks.domain.*;
 import com.crud.tasks.trello.config.TrelloConfig;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -62,8 +59,10 @@ class TrelloClientTest {
         when(trelloConfig.getTrelloToken()).thenReturn("test");
 
         TrelloCardDto trelloCardDto = new TrelloCardDto("Test task", "Test Description", "top", "test_id");
+        TrelloAttachmentsDto trelloAttachmentsDto = new TrelloAttachmentsDto();
+        BadgesDto badgesDto = new BadgesDto(1, trelloAttachmentsDto);
         URI uri = new URI("http://test.com/cards?key=test&token=test&name=Test%20task&desc=Test%20Description&pos=top&idList=test_id");
-        CreatedTrelloCard createdTrelloCard = new CreatedTrelloCard("1", "test task", "http://test.com", new ArrayList<>());
+        CreatedTrelloCard createdTrelloCard = new CreatedTrelloCard("1", "test task", "http://test.com", badgesDto);
         when(restTemplate.postForObject(uri, null, CreatedTrelloCard.class)).thenReturn(createdTrelloCard);
         //When
         CreatedTrelloCard newCard = trelloClient.createNewCard(trelloCardDto);
