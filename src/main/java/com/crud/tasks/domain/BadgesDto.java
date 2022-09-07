@@ -11,5 +11,5 @@ import java.util.List;
 @NoArgsConstructor
 public class BadgesDto {
     private int votes;
-    private List<TrelloAttachmentsDto> attachmentsByType;
+    private TrelloAttachmentsDto attachmentsByType;
 }
