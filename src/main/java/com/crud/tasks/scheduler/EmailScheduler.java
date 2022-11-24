@@ -13,9 +13,9 @@ import org.springframework.stereotype.Component;
 public class EmailScheduler {
 
     private static final String SUBJECT = "Tasks: Once a day email";
-    private final SimpleEmailService simpleEmailService;
+//    private final SimpleEmailService simpleEmailService;
     private final TaskRepository taskRepository;
-    private final AdminConfig adminConfig;
+//    private final AdminConfig adminConfig;
     private String task = " tasks";
 
     @Scheduled(cron = "0 0 10 * * *")
