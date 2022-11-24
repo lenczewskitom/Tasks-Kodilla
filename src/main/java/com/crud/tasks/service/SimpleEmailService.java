@@ -16,6 +16,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class SimpleEmailService {
 
+
     @Autowired
     private final JavaMailSender javaMailSender;
 
