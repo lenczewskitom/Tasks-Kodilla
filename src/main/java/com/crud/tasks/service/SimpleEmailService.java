@@ -17,19 +17,19 @@ import java.util.Optional;
 public class SimpleEmailService {
 
 
-    @Autowired
-    private final JavaMailSender javaMailSender;
+//    @Autowired
+//    private final JavaMailSender javaMailSender;
 
-    public void send(final Mail mail) {
-        log.info("Starting email preparation...");
-        try {
-            SimpleMailMessage mailMessage = createMailMessage(mail);
-            javaMailSender.send(mailMessage);
-            log.info("Email has been sent.");
-        } catch (MailException e) {
-            log.error("Failed to process email sending: " + e.getMessage(), e);
-        }
-    }
+//    public void send(final Mail mail) {
+//        log.info("Starting email preparation...");
+//        try {
+//            SimpleMailMessage mailMessage = createMailMessage(mail);
+//            javaMailSender.send(mailMessage);
+//            log.info("Email has been sent.");
+//        } catch (MailException e) {
+//            log.error("Failed to process email sending: " + e.getMessage(), e);
+//        }
+//    }
 
     private SimpleMailMessage createMailMessage(final Mail mail) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
