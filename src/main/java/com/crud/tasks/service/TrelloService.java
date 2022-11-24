@@ -22,8 +22,8 @@ public class TrelloService {
 //    @Autowired
 //    private final SimpleEmailService emailService;
     private final String SUBJECT = "Tasks: New Trello card";
-    @Autowired
-    private final AdminConfig adminConfig;
+//    @Autowired
+//    private final AdminConfig adminConfig;
 
     public List<TrelloBoardDto> fetchTrelloBoards() {
         return trelloClient.getTrelloBoards();
