@@ -1,7 +1,7 @@
 package com.crud.tasks.service;
 
 
-import com.crud.tasks.config.AdminConfig;
+//import com.crud.tasks.config.AdminConfig;
 import com.crud.tasks.domain.CreatedTrelloCardDto;
 import com.crud.tasks.domain.TrelloBoardDto;
 import com.crud.tasks.domain.TrelloCardDto;
@@ -25,14 +25,14 @@ public class TrelloServiceTest {
     @InjectMocks
     private TrelloService trelloService;
 
-    @Mock
-    private AdminConfig adminConfig;
+//    @Mock
+//    private AdminConfig adminConfig;
 
     @Mock
     private TrelloClient trelloClient;
 
-    @Mock
-    private SimpleEmailService simpleEmailService;
+//    @Mock
+//    private SimpleEmailService simpleEmailService;
 
     @Test
     public void shouldfetchTrelloBoards() {
