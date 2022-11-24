@@ -19,8 +19,8 @@ public class TrelloService {
 
     @Autowired
     private final TrelloClient trelloClient;
-    @Autowired
-    private final SimpleEmailService emailService;
+//    @Autowired
+//    private final SimpleEmailService emailService;
     private final String SUBJECT = "Tasks: New Trello card";
     @Autowired
     private final AdminConfig adminConfig;
